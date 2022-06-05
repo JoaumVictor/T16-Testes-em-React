@@ -8,7 +8,6 @@ import About from '../components/About';
 describe('Testa a a rota About', () => {
   test('Testa se meu titulo está definido na tela', () => {
     renderWithRouter(<About />);
-
     const titulo = screen.getByRole('heading', { name: /about pokédex/i });
     const tituloText = screen.getByText(/about pokédex/i);
     expect(titulo).toBeDefined();

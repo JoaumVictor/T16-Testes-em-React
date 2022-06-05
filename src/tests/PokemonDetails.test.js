@@ -8,9 +8,7 @@ import App from '../App';
 describe('requisito 7', () => {
   test('Verifica se os detalhes do pokemon selecionado aparecem', () => {
     const { history } = renderWithRouter(<App />);
-
     history.push('/pokemons/151');
-
     const details = screen.getByRole('heading', { name: /mew details/i });
     expect(details).toBeDefined();
     const sumario = screen.getByRole('heading', { name: /summary/i });
